@@ -1,0 +1,20 @@
+package clases;
+
+import java.util.ArrayList;
+
+public class Pricipal {
+	static ArrayList<Poligono> poligono = new ArrayList<Poligono>();
+	static Scanner entrada = new Scanner(System.in)
+	public static void main(String[] args) {
+		//llenar un poligono
+	}
+	public static void llenarPoligono() {
+		int opcion;
+		do {
+			System.out.println("Digite que Poligono Desea");
+			System.out.println("1. Triangulo"
+					+ "\n2. Rectangulo"
+					+ "\nOpcion: ");
+		} while (condition);
+	}
+}

@@ -1,0 +1,12 @@
+package com.dimensiones;
+
+public class Triangulo extends Dimensiones {
+	public String tipoTriangulo;
+	public void area() {
+		System.out.println(this.base*altura);
+	}
+	public void imprimirTipo() {
+			System.out.println("tipoTriangulo: "+tipoTriangulo);
+	}
+	
+}

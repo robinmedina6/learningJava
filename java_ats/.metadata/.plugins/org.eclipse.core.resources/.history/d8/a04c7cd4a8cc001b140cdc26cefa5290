@@ -1,0 +1,26 @@
+package clases;
+
+public class Objeto {
+	//atributos
+	private int posicionx; 
+	private int posiciony;
+	int posicionInicialX;
+	int posicionInicialY;
+	//metodos
+	public Objeto() {
+		posicionInicialX = (int) Math.random()*10;
+		posicionInicialy = (int) Math.random()*10;
+	}
+	public void moverDerecha() {
+		posicionx++;		
+	}
+	public void moverIzquierda() {
+		posicionx--;
+	}
+	public void moverArriba() {
+		posiciony++;
+	}
+	public void moverAbajo() {
+		posiciony--;
+	}
+}

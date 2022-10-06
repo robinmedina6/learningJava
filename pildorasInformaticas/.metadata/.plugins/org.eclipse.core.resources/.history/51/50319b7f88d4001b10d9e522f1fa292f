@@ -1,0 +1,9 @@
+package com.post.co;
+
+public class ConectionFactory {
+	private double API_VERSION=0;
+	private String API="";
+	private String METHOD ="POST";
+	private String TYPE = "appplication/x-www-form-urlencoded";
+	
+}

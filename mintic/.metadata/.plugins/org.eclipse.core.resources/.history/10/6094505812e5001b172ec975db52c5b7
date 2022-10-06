@@ -1,0 +1,7 @@
+package com.dimensiones;
+
+public class Triangulo {
+	public String tipoTriangulo;
+	
+	
+}

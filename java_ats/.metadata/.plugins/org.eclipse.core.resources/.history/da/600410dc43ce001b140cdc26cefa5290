@@ -1,0 +1,40 @@
+package clases;
+
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+import javax.swing.JOptionPane;
+
+
+
+public class PruebaExcepciones {
+
+	public static void main(String[] args) {
+	
+	
+	}
+	public void leerArchivo() throws FileNotFoundException  {
+		File archivo = new File("C:\\\\java\\\\java_ats\\\\PruebaExcepciones\\\\src\\\\archivo.txt");
+		FileReader fr = new FileReader(archivo);
+		BufferedReader bf = new BufferedReader(fr);
+		String linea;
+		while ((linea =bf.readLine())!= null) {
+			System.out.println(linea);
+			
+		}
+	}
+	public void leerarchivo2()  {
+		try {
+			leerArchivo();
+		}catch(FileNotFoundException ex) {
+			JOptionPane.showMessageDialog(null,"no se ha encontrado el archivo dese ado verifique la ruta");
+		}
+	}
+	
+	
+
+}

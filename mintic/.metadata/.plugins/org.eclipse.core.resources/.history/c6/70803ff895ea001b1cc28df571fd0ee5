@@ -1,0 +1,23 @@
+package mapas;
+
+import java.util.Map;
+import java.util.TreeMap;
+
+public class Principal {
+	public static void main(String[] args) {
+		
+		Map<Estudiante, Docente> mapSchool = new  TreeMap<Estudiante, Docente>();
+		Docente felipe = new Docente("Felipe","barrera","Matematicas");
+		mapSchool.put(new Estudiante("Robinson","medina","c3", "Central"), felipe );
+		mapSchool.put(new Estudiante("Karen","Duran","c3", "Pepular"), felipe );
+		mapSchool.put(new Estudiante("Yenny","castiblanco","c3", "quintas"), felipe );
+		mapSchool.put(new Estudiante("pepito","perez","t3", "Dorado"), new Docente("carlos", "Jerez", "Ciencias"));
+		
+		for(Estudiante estudianteLLave: mapSchool.keySet()) {
+			System.out.println(estudianteLLave.getNombre()+" "+estudianteLLave.getApellido());
+			System.out.println("Docente:" mapSchool.get(estudianteLLave).getNombre()+" "+mapSchool.get(estudianteLLave).getApellido()+" MAT:"+mapSchool.get(estudianteLLave).getMateria());
+		}
+		
+		
+	}
+}

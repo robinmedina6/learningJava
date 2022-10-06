@@ -1,0 +1,6 @@
+package perfil.profesional;
+
+public class Directivo extends Persona {
+	public String dependencia;
+	
+}

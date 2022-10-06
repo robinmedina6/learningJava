@@ -1,0 +1,10 @@
+package clases;
+
+import java.util.ArrayList;
+
+public class Pricipal {
+	static ArrayList<Poligono> poligono = new ArrayList<Poligono>();
+	public static void main(String[] args) {
+		Poligono pligonos[]
+	}
+}

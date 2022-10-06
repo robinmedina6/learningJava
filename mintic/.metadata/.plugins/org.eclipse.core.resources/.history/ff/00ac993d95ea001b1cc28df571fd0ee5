@@ -1,0 +1,14 @@
+package mapas;
+
+import java.util.Map;
+import java.util.TreeMap;
+
+public class Principal {
+	public static void main(String[] args) {
+		
+		Map<Estudiante, Docente> mapSchool = new  TreeMap<Estudiante, Docente>();
+		Profesor felipe = new Docente("Felipe","barrera","Matematicas");
+		mapSchool.put(new Estudiante("Robinson","medina","c3", "Central"), felipe );
+		
+	}
+}

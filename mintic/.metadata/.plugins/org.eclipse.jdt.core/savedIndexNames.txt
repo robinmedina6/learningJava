@@ -1,0 +1,16 @@
+INDEX VERSION 1.131+C:\java\mintic\.metadata\.plugins\org.eclipse.jdt.core
+1041679442.index
+457937600.index
+3962170613.index
+2644913824.index
+3406743565.index
+3991448300.index
+3415286742.index
+1106769322.index
+3369794294.index
+4242768837.index
+1368526336.index
+523306588.index
+2810908502.index
+972004085.index
+1323870819.index

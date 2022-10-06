@@ -1,0 +1,6 @@
+package politicos;
+
+public abstract class Politico extends Persona {
+	public String regionRepresentada;
+	
+}

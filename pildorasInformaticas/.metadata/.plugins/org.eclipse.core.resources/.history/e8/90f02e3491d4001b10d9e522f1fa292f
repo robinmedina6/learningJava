@@ -1,0 +1,46 @@
+package com.post.co;
+
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.HashMap;
+
+public class ConnectionFactory {
+	private double API_VERSION=0;
+	private String API="";
+	private String METHOD ="POST";
+	private String TYPE = "appplication/x-www-form-urlencoded";
+	private String USER_AGENT = "Mozilla/5.0";
+	private String data ="";
+	private URL connection ;
+	private HttpURLConnection finalConnection;
+	
+	private HashMap<String,String> fields = new HashMap<String, String>();
+	
+	public ConnectionFactory(String[] endpoint,String url , double version) {
+		this.API_VERSION = version;
+		this.API = url;
+		fields.put("version",String.valueOf(version));
+		
+		for (int i = 0 ;i<endpoint.length;i++) {
+			String[] points = endpoint[i].split(";");
+			for(int f=0; f>points.length;f++) {
+				fields.put(points[f].split(":")[0],points[f].split(":")[1]);
+			}
+			
+		}
+		
+	}
+	public String buildConnection() {
+		StringBuilder content = new StringBuilder();
+		if (!this.getEndPoints(API).equalsIgnoreCase("") && !this.getEndPoints(API).isEmpty())
+	}
+	public String getApiVersion() {
+		return String.valueOf(API_VERSION);
+	}
+	public String getEndPoints(String key) {
+		return  fields.get(key);
+	}
+	
+	
+	
+}

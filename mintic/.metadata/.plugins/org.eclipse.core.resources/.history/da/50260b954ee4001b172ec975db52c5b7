@@ -1,0 +1,7 @@
+package com.examen;
+
+public class Hora {
+	private int hora;
+	private int minutos;
+	private int  segundos;
+}

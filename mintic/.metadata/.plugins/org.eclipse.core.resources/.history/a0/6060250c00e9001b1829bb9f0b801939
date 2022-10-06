@@ -1,0 +1,6 @@
+package semana4;
+
+public class Fisioterapeuta {
+	public String especialidad;
+	
+}

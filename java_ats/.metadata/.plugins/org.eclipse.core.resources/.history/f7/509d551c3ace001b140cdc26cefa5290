@@ -1,0 +1,21 @@
+package clases;
+
+import java.util.Scanner;
+
+public class PruebaExcepciones {
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		/*
+		int num1=5, num2=0;
+		int resultado = num1/num2;
+		System.out.println("el resultado es "+ resultado);	
+		System.out.println("Hola mundoi");
+		*/
+		int numero = entrada.nextInt();
+		System.out.println(numero);
+		
+		 
+		 
+	}
+	
+}

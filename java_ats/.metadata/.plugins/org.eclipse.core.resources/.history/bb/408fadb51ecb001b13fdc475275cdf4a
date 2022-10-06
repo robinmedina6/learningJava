@@ -1,0 +1,15 @@
+package clases;
+
+public class Persona {
+//atributos
+	String nombre;
+	int edad;
+	String DNI;
+
+	public Persona(String nombre, int edad) {
+		this.nombre = nombre;
+		this.edad = edad;
+		
+	}
+	
+}

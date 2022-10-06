@@ -1,0 +1,84 @@
+package eventos;
+
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class Ventana extends JFrame {
+		private JPanel panel1;
+		private JLabel saludo;
+		private JTextField cajaTexto;
+		private JButton boton;
+		private JTextArea areaTexto;
+		
+	public Ventana() {
+		this.setBounds(50,50,500,500);
+		this.setTitle("eventos");
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		iniciarComponentes();
+	}
+	
+	private void iniciarComponentes() {
+		colocarPanel();
+		//colocaretiqueta();
+		//colocarCajadeTexto();
+		colocarBoton();
+	}
+	private void colocarPanel() {
+		panel1 =new JPanel();
+		panel1.setLayout(null);
+		this.add(panel1);
+	}
+	private void colocaretiqueta() {
+		JLabel etiqueta  = new JLabel("Ingrese su Nombre");
+		etiqueta.setFont(new Font("Arial",Font.ITALIC,12));
+		etiqueta.setBounds(30,10,200,30);
+		panel1.add(etiqueta);
+	}
+	private void colocarCajadeTexto() {
+		cajaTexto = new JTextField();
+		cajaTexto.setBounds(30, 50, 300, 30);
+		panel1.add(cajaTexto);
+	}
+	private void colocarAreaDeTexto() {
+		areaTexto = new JTextArea();
+		areaTexto.setBounds(20,20,200,300);
+		panel1.add(areaTexto);
+		
+	}
+	private void colocarBoton() {
+		boton = new JButton("Pulsa Aqui");
+		boton.setBounds(150,100,150,40);
+		boton.setFont(new Font("arial",0,15));
+		panel1.add(boton);
+		
+		saludo = new JLabel();
+		saludo.setBounds(50,200,300,40);
+		saludo.setFont(new Font("arial",1,20));
+		panel1.add(saludo);
+		
+		eventoOyentedeAccion();
+		
+	}
+	private void eventoOyentedeAccion() {
+		//agregando evento de tipo ActionListener
+				ActionListener  oyenteDeAccion = new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						saludo.setText("Hola " + cajaTexto.getText() + " ¿como vas?");
+					}
+				};
+				
+				boton.addActionListener(oyenteDeAccion);
+	}
+	
+	
+
+}

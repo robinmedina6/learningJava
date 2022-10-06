@@ -1,0 +1,11 @@
+package semana4;
+
+import java.util.ArrayList;
+
+public class Principal {
+	public static ArrayList<SeleccionFutbol> lista;
+	public static void main(String[] args) {
+		Jugador james = new Jugador("nombre","apellido", 25, 10, 9 ,0);
+		lista.add(james);
+	}
+}

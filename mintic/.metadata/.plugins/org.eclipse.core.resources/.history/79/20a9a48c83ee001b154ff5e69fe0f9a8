@@ -1,0 +1,14 @@
+package reto;
+
+import java.util.TreeSet;
+
+public class Usuario {
+	private TreeSet<String> agenda= new TreeSet<String>();
+	public void addTelefono(String tel) {
+		agenda.add(tel);
+	}
+	public void mostrarTelefonos() {
+		System.out.println(agenda.toString());
+	}
+
+}

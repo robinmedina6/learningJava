@@ -1,0 +1,23 @@
+package com.reto;
+
+public class Usuario {
+	private String nombreUsuario;
+	private int identificacion;
+	private String email;
+	private int edad;
+	private String area ;
+	private boolean jefe;
+	
+	public Usuario(String nombreUsuario, int identificacion, String email, int edad, String area, boolean jefe) {
+		super();
+		this.nombreUsuario = nombreUsuario;
+		this.identificacion = identificacion;
+		this.email = email;
+		this.edad = edad;
+		this.area = area;
+		this.jefe = jefe;
+	}
+	
+	
+	
+}

@@ -1,0 +1,21 @@
+package semana4;
+
+import java.util.ArrayList;
+
+public class Principal {
+	public static ArrayList<SeleccionFutbol> lista;
+	public static void main(String[] args) {
+		Jugador james = new Jugador("james","Rodriguez",13, 25, 10, 9 );
+		Fisioterapeuta fisio= new Fisioterapeuta("pepito", "entrenador",1234,30,"musculo");
+		DirectorTecnico dt = new DirectorTecnico("Reinaldo", "rueda", 10, 20, 1);
+		lista.add(james);
+		lista.add(fisio);
+		lista.add(dt);
+		
+		for(SeleccionFutbol sf:lista) {
+			System.out.println(sf.getNombre()+" "+ sf.getApellido());
+			sf.entrenar();
+		}
+		
+	}
+}

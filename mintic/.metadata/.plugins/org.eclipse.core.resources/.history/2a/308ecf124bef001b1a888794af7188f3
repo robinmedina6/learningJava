@@ -1,0 +1,7 @@
+package hola.gui;
+
+import javax.swing.JPanel;
+http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=4008412
+public class HolaGui extends JPanel {
+
+}

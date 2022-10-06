@@ -1,0 +1,17 @@
+package principal;
+
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+
+public class Principal {
+	private static URL url;
+	private static HttpURLConnection http;
+
+	public static void main(String[] args) {
+
+	}
+}

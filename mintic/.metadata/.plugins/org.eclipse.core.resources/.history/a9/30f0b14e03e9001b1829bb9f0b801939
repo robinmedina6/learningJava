@@ -1,0 +1,12 @@
+package semana4;
+
+public class DirectorTecnico extends SeleccionFutbol {
+	private int Experiencia;
+
+	public DirectorTecnico(String nombre, String apellido, int id, int edad, int experiencia) {
+		super(nombre, apellido, id, edad);
+		Experiencia = experiencia;
+	}
+	
+	
+}

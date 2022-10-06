@@ -1,0 +1,9 @@
+import javax.swing.JOptionPane;
+
+public class EntradaJOptionPane {
+	public static void main(String[] args) {
+		String Nombre = JOptionPane.showInputDialog("ingrese el nombre");
+		int edad =JOptionPane.showInputDialog("ingrese nombre")
+	}
+	
+}

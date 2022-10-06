@@ -1,0 +1,14 @@
+package perfil.profesional;
+
+public class Directivo extends Persona {
+	public String dependencia;
+
+	@Override
+	public String toString() {
+		return "Directivo [dependencia=" + dependencia + ", nombre=" + nombre + ", apellido=" + apellido + ", sexo="
+				+ sexo + ", edad=" + edad + ", getNombre()=" + getNombre() + ", toString()=" + super.toString()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
+	}
+	
+	
+}

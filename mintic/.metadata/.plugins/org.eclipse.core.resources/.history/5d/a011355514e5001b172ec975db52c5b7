@@ -1,0 +1,12 @@
+package com.dimensiones;
+
+public class Triangulo {
+	public String tipoTriangulo;
+	public void area() {
+		
+	}
+	public void imprimirTipo() {
+		
+	}
+	
+}

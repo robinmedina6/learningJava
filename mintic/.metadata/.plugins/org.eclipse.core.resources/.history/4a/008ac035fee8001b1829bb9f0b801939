@@ -1,0 +1,29 @@
+package semana4;
+
+public class SeleccionFutbol {
+	protected String nombre;
+	protected String apellido;
+	public int id;
+	
+	public SeleccionFutbol(String nombre, String apellido, int id, int edad) {
+		super();
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.id = id;
+		this.edad = edad;
+	}
+	public int edad;
+	
+	public void viajar() {
+		System.out.println("estoy viajando");
+	}
+	public void concentrar() {
+		System.out.println("estoy concentrado");
+	}
+	public void entrenar() {
+		System.out.println("estoy entrenando");
+	}
+	public void jugarPartido() {
+		System.out.println("estoy en el partido");
+	}
+}

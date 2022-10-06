@@ -1,0 +1,6 @@
+package perfil.profesional;
+
+public class JefeArea extends Persona {
+	public String area;
+	
+}

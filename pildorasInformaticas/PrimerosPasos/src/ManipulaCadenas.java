@@ -1,0 +1,14 @@
+
+public class ManipulaCadenas {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String nombre ="Robinson";
+		System.out.println(nombre);
+		System.out.println(nombre.length());
+		System.out.println(nombre.charAt(0));
+		System.out.println(nombre.charAt(nombre.length()-1));
+		System.out.println(nombre.substring(0,5));
+	}
+
+}

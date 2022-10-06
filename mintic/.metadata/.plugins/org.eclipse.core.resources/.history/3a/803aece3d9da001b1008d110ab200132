@@ -1,0 +1,33 @@
+package principal;
+
+import java.util.Scanner;
+
+public class Principal {
+	public static void main(String[] args) {
+		Scanner entrada = Scanner(System.in);
+		double hectareas = entrada.nextInt();
+		final double MTSXHECTAREA=10000;
+		double terreno= hectareas * MTSXHECTAREA;
+		double pino=0;
+		double oyamel=0;
+		double cedro=0;
+		if (terreno>1000000) {
+			pino=0.7;
+			oyamel=0.2;
+			cedro=0.10;
+			pino = terreno * pino;
+			oyamel= terreno * oyamel;
+			cedro = terreno * cedro;
+			
+		}else{
+			pino=0.7;
+			oyamel=0.2;
+			cedro=0.10;
+			pino = terreno * pino;
+			oyamel= terreno * oyamel;
+			cedro = terreno * cedro;
+			
+		}
+	}
+	
+}

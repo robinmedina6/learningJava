@@ -1,0 +1,12 @@
+package clases;
+
+public class main {
+public static void main(String[] args) {
+	boolean matriz[][] = new boolean[10][10];
+	for (int y=0; y<10;y++) {
+		for (int x=0; x<10;x++) {
+			matriz[x][y]=false;
+		}
+	}
+}
+}

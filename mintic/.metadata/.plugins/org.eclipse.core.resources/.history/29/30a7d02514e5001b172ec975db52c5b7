@@ -1,0 +1,12 @@
+package com.dimensiones;
+
+public class Dimensiones {
+	public double base;
+	public double altura;
+	
+	public void imprimirDimesiones() {
+		System.out.println("area: "+base +"\naltura: "+altura);
+	}
+	
+
+}

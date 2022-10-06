@@ -1,0 +1,19 @@
+package com.post.co;
+
+public class Example {
+
+	public static void main(String[] args) {
+		double version = 0.1;
+		String url = "https://example.com/api.php";
+		String[] fields = {
+				"username:bob;",
+				"password:123;",
+				"email:bob@example",
+				"purchase:plan1"
+				
+				
+		};
+		ConnectionFactory connection = new ConnectionFactory(fields,url, version);
+		System.out.println(connection.getEndpointvalue("email"));
+	
+}

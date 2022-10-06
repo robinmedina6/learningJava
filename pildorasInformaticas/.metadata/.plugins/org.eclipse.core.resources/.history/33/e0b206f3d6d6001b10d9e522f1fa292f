@@ -1,0 +1,169 @@
+package com.post.co;
+
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpCookie;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Stream;
+
+public class ConnectionFactory {
+	private double API_VERSION=0;
+	private String API="";
+	private String METHOD ="POST";
+	private String TYPE = "appplication/x-www-form-urlencoded";
+	private String USER_AGENT = "Mozilla/5.0";
+	private String data ="";
+	private URL connection ;
+	private HttpURLConnection finalConnection;
+//coockie
+	private final String COOKIES_HEADER = "Set-Cookie";
+	private java.net.CookieManager msCookieManager = new java.net.CookieManager();
+//end cookie
+	private HashMap<String,String> fields = new HashMap<String, String>();
+	private HashMap<String,String> properties = new HashMap<String, String>();
+
+	
+	public ConnectionFactory(String[] endpoint,String[] properties,String url , double version) {
+		this.API_VERSION = version;
+		this.API = url;
+		fields.put("version",String.valueOf(version));
+		
+		for (int i = 0 ;i<endpoint.length;i++) {
+			String[] points = endpoint[i].split(";");
+			for(int f=0; f<points.length;f++) {
+				fields.put(points[f].split(":")[0],points[f].split(":")[1]);
+			}
+			
+		}
+		
+		for (int i = 0 ;i<properties.length;i++) {
+			String[] points = properties[i].split(":",2);
+			this.properties.put(points[0],points[1]);
+			
+		}
+		System.out.println(fields.toString()+"\n"+this.properties.toString());
+		
+	}
+	public String buildConnection() {
+		StringBuilder content = new StringBuilder();
+		
+		if (!this.getEndPoints().equalsIgnoreCase("") && !this.getEndPoints().isEmpty()) {
+			String vars ="";
+			String vals= "";
+			try {
+				for(Map.Entry<String, String> entry : fields.entrySet()) {
+					vars = entry.getKey();
+					vals = entry.getValue();
+					data +=("&"+vars+"="+vals);
+				}
+				
+				if(data.startsWith("&")) {
+					data = data.replaceFirst("&", "");
+				}
+				connection = new URL(API);
+				BufferedReader reader = new BufferedReader(new InputStreamReader(readWhitAcces(connection, data)));
+				String line;
+				while((line=reader.readLine())!= null) {
+					content.append(line+"\n");
+				}
+				reader.close();
+				return content.toString();
+			} catch (Exception e) {
+				System.err.println(e.getMessage()+"prb");
+			}
+		}else {
+			return null;
+		}
+		return null;
+		
+	}
+
+	private InputStream readWhitAcces(URL url , String data) {
+		try {
+			byte[]	out = data.toString().getBytes();	
+			finalConnection= (HttpURLConnection) url.openConnection();
+			finalConnection.setRequestMethod(METHOD);
+			finalConnection.setDoOutput(true);
+			finalConnection.setInstanceFollowRedirects (true);
+			/*finalConnection.addRequestProperty("user-Agent",USER_AGENT);
+			finalConnection.addRequestProperty("content-Type", TYPE);*/
+			
+			String vars ="";
+			String vals= "";
+			for(Map.Entry<String, String> entry : properties.entrySet()) {
+				vars = entry.getKey();
+				vals = entry.getValue();
+				finalConnection.addRequestProperty(vars, vals);
+			}
+			this.setCookies();
+			finalConnection.connect();
+			try {
+				OutputStream os = finalConnection.getOutputStream();
+				os.write(out);
+				this.saveCookies();
+				
+			} catch (Exception e) {
+				System.err.println(e.getMessage()+"recibido");
+				return finalConnection.getErrorStream();
+			}
+			return finalConnection.getInputStream();
+		} catch (Exception e) {
+			System.err.println(e.getMessage()+"|config|");  
+			return finalConnection.getErrorStream();
+			//return null;
+		}
+	}
+	
+	public String getApiVersion() {
+		return String.valueOf(API_VERSION);
+	}
+	public String getEndPoints() {
+		return  fields.toString();
+	}
+	public String getEndpointvalue(String key) {
+		return fields.get(key);		
+	}
+	public void setUserAgent(String useragent) {
+		this.USER_AGENT=useragent;
+	}
+	public void setMetod(String method) {
+		this.METHOD=method;
+	}
+	public void setSubmissionType(String type) {
+		this.TYPE=type;
+	}
+	public  string getProperties() {
+		return finalConnection.getRequestProperties().get("cookies");
+	}
+	public void saveCookies() {
+		Map<String, List<String>> headerFields = finalConnection.getHeaderFields();
+		List<String> cookiesHeader = headerFields.get(COOKIES_HEADER);
+		String cookies ="";
+		if (cookiesHeader != null) {
+		    for (String cookie : cookiesHeader) {
+		        msCookieManager.getCookieStore().add(null,HttpCookie.parse(cookie).get(0));
+		        cookies+=cookie;
+		    }               
+		}
+		System.out.println("COOCKIES: "+ headerFields );
+	}
+	public void setCookies() {
+		if (msCookieManager.getCookieStore().getCookies().size() > 0) {
+		    // While joining the Cookies, use ',' or ';' as needed. Most of the servers are using ';'
+			String cookies="";
+			for (HttpCookie cookie : msCookieManager.getCookieStore().getCookies()) {
+				cookies=cookie.getValue() +";"+   cookie.getName();
+			  }
+		    finalConnection.setRequestProperty("Cookie", cookies);
+		    System.out.println("cambiadas: "+cookies);
+		}
+		
+	}
+}

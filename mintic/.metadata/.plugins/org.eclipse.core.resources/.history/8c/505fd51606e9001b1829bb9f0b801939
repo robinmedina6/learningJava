@@ -1,0 +1,8 @@
+package politicos;
+
+public class Principal {
+	public static void main(String[] args) {
+		Diputado dip1 = new Diputado("pepito", "perez", "Santander", "representantes");
+		Senador sen1 = new Senador("Pepita", "perez", "cundinamarca", "senado");
+	}
+}

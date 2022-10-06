@@ -1,0 +1,11 @@
+package com.viernes;
+
+public class Persona {
+	private String nombre="";
+	private byte edad=0;
+	private int id=0;
+	private char sexo='H';
+	private float peso=0;
+	private float altura=0;
+	
+}

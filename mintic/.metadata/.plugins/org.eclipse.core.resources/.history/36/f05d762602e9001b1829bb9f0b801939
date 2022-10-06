@@ -1,0 +1,11 @@
+package semana4;
+
+public class Fisioterapeuta extends SeleccionFutbol{
+	private String especialidad;
+
+	public Fisioterapeuta(String especialidad) {
+		super();
+		this.especialidad = especialidad;
+	}
+	
+}

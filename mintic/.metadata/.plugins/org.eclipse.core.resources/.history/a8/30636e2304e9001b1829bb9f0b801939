@@ -1,0 +1,17 @@
+package semana4;
+
+public class DirectorTecnico extends SeleccionFutbol {
+	private int Experiencia;
+
+	public DirectorTecnico(String nombre, String apellido, int id, int edad, int experiencia) {
+		super(nombre, apellido, id, edad);
+		Experiencia = experiencia;
+	}
+	
+	@Override
+	public void entrenar() {
+		// TODO Auto-generated method stub
+		System.out.println("estoy entrenando con los jugadores les doy indicaciones");
+	}
+	
+}

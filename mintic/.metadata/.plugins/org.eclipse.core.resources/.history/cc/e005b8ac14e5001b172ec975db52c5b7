@@ -1,0 +1,6 @@
+package com.dimensiones;
+
+public class Cuadrilatero {
+	public String tipoCuadrilatero;
+	
+}

@@ -1,0 +1,41 @@
+package com.reto;
+
+public class Usuario {
+	private String nombreUsuario;
+	private int identificacion;
+	private String email;
+	private int edad;
+	private String area ;
+	private boolean jefe;
+	private double salario;
+	
+	public Usuario(String nombreUsuario, int identificacion, String email, int edad, String area, boolean jefe) {
+		super();
+		this.nombreUsuario = nombreUsuario;
+		this.identificacion = identificacion;
+		this.email = email;
+		this.edad = edad;
+		this.area = area;
+		this.jefe = jefe;
+		
+		double totaldevengado=0;
+		if(area.equalsIgnoreCase("desarrollo")) {
+			totaldevengado=4500000;
+			if(jefe == true) {
+				totaldevengado+=2500000;
+			}
+		}else if(area.equalsIgnoreCase("administrativa")) {
+			totaldevengado=3500000;
+			if(jefe == true) {
+				totaldevengado+=3000000;
+			}
+		}
+		
+	}
+	public void info() {
+		
+	}
+	
+	
+	
+}

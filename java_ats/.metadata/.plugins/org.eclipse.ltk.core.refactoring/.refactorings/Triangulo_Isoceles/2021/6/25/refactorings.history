@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;clases.Main.MayorArea(...)&apos; to &apos;mayorArea&apos;&#x0D;&#x0A;- Original project: &apos;Triangulo_Isoceles&apos;&#x0D;&#x0A;- Original element: &apos;clases.Main.MayorArea(...)&apos;&#x0D;&#x0A;- Renamed element: &apos;clases.Main.mayorArea(...)&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;MayorArea&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;clases{Main.java[Main~MayorArea~\[QTriangulo_Isoceles;" name="mayorArea" references="true" stamp="1623774657359" version="1.0"/>
+</session>

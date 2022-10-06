@@ -1,0 +1,22 @@
+package clases;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class PruebaExcepciones {
+
+	public static void main(String[] args) throws FileNotFoundException, IOException {
+		// Excepciones Verificadas [IOExcepcion]
+		// Lectura de un archivo de texto (.txt)
+		BufferedReader bf = new BufferedReader(new FileReader("C:\\java\\java_ats\\PruebaExcepciones\\src\\archivo.txt"));
+		String linea;
+		while ((linea=bf.readLine())!=null) {
+			System.out.println(linea);
+
+		}
+	}
+
+}

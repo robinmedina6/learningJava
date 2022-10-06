@@ -1,0 +1,11 @@
+package com.reto3;
+
+public class Gorila extends Animal{
+
+	public Gorila(double pesoArg,double alturaArg) {
+		super();
+		this.peso=pesoArg;
+		this.altura=alturaArg;
+	}
+
+}

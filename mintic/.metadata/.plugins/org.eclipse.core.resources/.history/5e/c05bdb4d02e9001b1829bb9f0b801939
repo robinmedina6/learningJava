@@ -1,0 +1,8 @@
+package semana4;
+
+public class DirectorTecnico extends SeleccionFutbol {
+	private int Experiencia;
+
+
+	
+}

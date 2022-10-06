@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;clases.Vehiculo.MostrarDatos()&apos; to &apos;mostrarDatos&apos;&#x0D;&#x0A;- Original project: &apos;Polimorfismo&apos;&#x0D;&#x0A;- Original element: &apos;clases.Vehiculo.MostrarDatos()&apos;&#x0D;&#x0A;- Renamed element: &apos;clases.Vehiculo.mostrarDatos()&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;MostrarDatos&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;clases{Vehiculo.java[Vehiculo~MostrarDatos" name="mostrarDatos" references="true" stamp="1623795880048" version="1.0"/>
+</session>

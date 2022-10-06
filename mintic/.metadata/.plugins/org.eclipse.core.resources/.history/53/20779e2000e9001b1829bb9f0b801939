@@ -1,0 +1,11 @@
+package semana4;
+
+public class Fisioterapeuta {
+	public String especialidad;
+
+	public Fisioterapeuta(String especialidad) {
+		super();
+		this.especialidad = especialidad;
+	}
+	
+}

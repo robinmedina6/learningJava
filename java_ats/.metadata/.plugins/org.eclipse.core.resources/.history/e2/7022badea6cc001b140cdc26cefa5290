@@ -1,0 +1,33 @@
+package clases;
+
+import javax.swing.JOptionPane;
+
+public class main {
+public static void main(String[] args) {
+	boolean matriz[][] = new boolean[10][10];
+	int posx = (int) (Math.random()*10);
+	int posy = (int) (Math.random()*10);
+	String imp = "";		
+	for (int y=0; y<10;y++) {
+		for (int x=0; x<10;x++) {
+			matriz[x][y]=false;
+		}
+	}
+	matriz[posx][posy]=true;
+	
+	for (int y=0; y<10;y++) {
+		for (int x=0; x<10;x++) {
+			if (matriz[x][y]) {imp+="X";}else{imp+="O";}
+		}
+		imp+="\n";
+	}
+	imp += posx +":"+ posy;
+	System.out.println(imp);
+	String opcion = JOptionPane.showInputDialog("opciones:"
+			+ "1. mover a la derecha"
+			+ "2. mover a la izquierda"
+			+ "3. mover hacia abajo"
+			+ "4. mover hacia arriba");
+	
+}
+}

@@ -1,0 +1,19 @@
+package clases;
+
+public class Persona {
+//atributos
+	String nombre;
+	int edad;
+
+	public Persona(String nombre, int edad) {
+		this.nombre = _nombre;
+		this.edad = _edad;
+		
+	}
+	
+	public void MostrarDatos() {
+
+		System.out.println("el nombre: "+nombre);
+		System.out.println("la edad:  "+edad);
+	}
+}

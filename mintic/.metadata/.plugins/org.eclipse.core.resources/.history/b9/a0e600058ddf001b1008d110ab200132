@@ -1,0 +1,25 @@
+package com.fruta;
+
+public class Fruta {
+
+	private String Nombre;
+	private String color;
+	private double peso;
+	private double precio;
+	
+	public Fruta(String nombre, String color, int peso) {
+		this.Nombre=nombre;
+		this.color = color;
+		this.peso=peso;
+	}
+	
+	public void datosFruta() {
+		System.out.println("Nombre: "+this.Nombre);
+		System.out.println("color: "+this.color);
+		System.out.println("Peso: "+this.peso);
+	}
+	
+	public void precioFruta(double peso) {
+		System.out.println("");
+	}
+}

@@ -1,0 +1,79 @@
+package hola.gui;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.BorderLayout;
+import javax.swing.JTextField;
+import javax.swing.JPanel;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.JButton;
+import java.awt.GridLayout;
+import javax.swing.BoxLayout;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class Ventana extends JFrame {
+
+	
+	private JTextField txtNombre;
+	private JTextField txtApellido;
+	private JTextField txtCelular;
+
+	/**
+	 * Create the application.
+	 */
+	public Ventana() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		this.setBounds(100, 100, 450, 300);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.getContentPane().setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Nombre");
+		lblNewLabel.setBounds(21, 68, 66, 25);
+		frame.getContentPane().add(lblNewLabel);
+		
+		txtNombre = new JTextField();
+		txtNombre.setBounds(94, 70, 86, 20);
+		frame.getContentPane().add(txtNombre);
+		txtNombre.setColumns(10);
+		
+		JLabel lblNewLabel_1 = new JLabel("Mi Agenda");
+		lblNewLabel_1.setBounds(81, 16, 191, 25);
+		frame.getContentPane().add(lblNewLabel_1);
+		
+		JLabel lblApellido = new JLabel("Apellido");
+		lblApellido.setBounds(21, 104, 66, 25);
+		frame.getContentPane().add(lblApellido);
+		
+		txtApellido = new JTextField();
+		txtApellido.setColumns(10);
+		txtApellido.setBounds(94, 106, 86, 20);
+		frame.getContentPane().add(txtApellido);
+		
+		txtCelular = new JTextField();
+		txtCelular.setColumns(10);
+		txtCelular.setBounds(94, 142, 86, 20);
+		frame.getContentPane().add(txtCelular);
+		
+		JLabel lblCelular = new JLabel("Celular");
+		lblCelular.setBounds(21, 140, 66, 25);
+		frame.getContentPane().add(lblCelular);
+		
+		JButton btnGuardar = new JButton("Guardar");
+		btnGuardar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnGuardar.setBounds(49, 182, 89, 23);
+		frame.getContentPane().add(btnGuardar);
+	}
+}

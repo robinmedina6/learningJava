@@ -1,0 +1,24 @@
+package clases;
+
+public class Triangulo_Isoceles {
+	private double base;
+	private double lado;
+	
+	public Triangulo_Isoceles(double base , double lado) {
+		this.base=base;
+		this.lado=lado;
+		
+	}
+	public double obtenerPerimetro() {
+		return  2*lado+base;
+		
+	}
+	public  double ObtenerArea() {
+		double area = (base*Math.sqrt((lado*lado)-((base*base)/4)))/2;
+		return area;
+	}
+	public String mostrarDatos() {
+		return "base: "+base+ "\nlado: "+lado+"\nPerimetro: "+obtenerPerimetro()+"\nArea: "+ObtenerArea();
+
+	}
+}

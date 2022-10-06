@@ -1,0 +1,20 @@
+package clases;
+
+public class Objeto {
+	//atributos
+	private int posicionx; 
+	private int posiciony;
+	//metodos
+	public void moverDerecha() {
+		posicionx++;		
+	}
+	public void moverIzquierda() {
+		posicionx--;
+	}
+	public void moverArriba() {
+		posiciony++;
+	}
+	public void moverAbajo() {
+		posiciony--;
+	}
+}

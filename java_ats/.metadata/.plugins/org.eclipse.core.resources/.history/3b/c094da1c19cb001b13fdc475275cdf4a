@@ -1,0 +1,19 @@
+package clases;
+
+import javax.swing.JOptionPane;
+
+public class main {
+public static void main (String [] args) {
+	int n1= Integer.parseInt(JOptionPane.showInputDialog("Digite un numero1: "));
+	int n2= Integer.parseInt(JOptionPane.showInputDialog("Digite un numero2: "));
+	
+	Operacion op = new Operacion();
+	
+	op.sumar(n1,n2);
+	op.restar(n1,n2);
+	op.multiplicar(n1, n2);
+	op.dividir(n1, n2);
+	
+	op.MostrarResultado();
+}
+}

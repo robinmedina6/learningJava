@@ -1,0 +1,4 @@
+
+public class EntradaDatos {
+	Scanner entrada = new Scanner(System.in);
+}

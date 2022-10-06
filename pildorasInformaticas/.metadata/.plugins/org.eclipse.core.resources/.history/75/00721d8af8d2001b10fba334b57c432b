@@ -1,0 +1,20 @@
+package poo;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Date;
+
+import javax.swing.Timer;
+
+public class PruebaTemporizador {
+	DameLaHora oyente = new DameLaHora();
+	Timer mitemporizador = new Timer(1000,oyente);
+	
+}
+
+class DameLaHora implements ActionListener{
+	public void actionPerformed(ActionEvent e) {
+		Date ahora = new Date();
+		System.out.println("te pongo la hora cad 5 sg" + ahora);
+	}
+}

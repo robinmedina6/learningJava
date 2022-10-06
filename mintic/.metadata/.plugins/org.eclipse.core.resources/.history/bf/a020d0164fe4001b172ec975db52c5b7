@@ -1,0 +1,9 @@
+package com.examen;
+
+public class Examen {
+	private String asignatura;
+	private String aula;
+	private Fecha fecha;
+	private Hora hora;
+	
+}

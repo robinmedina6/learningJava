@@ -1,0 +1,45 @@
+package com.post.co;
+
+public class Example {
+
+	public static void main(String[] args) {
+		double version = 0.1;
+		String url = "http://intranetjer.com/index.php/salir";
+		  
+		String[] fields = {
+				"username:1052413143;",
+				"password:1052413143;",
+				"Submit: ;",
+				"option:com_users;",
+				"task:user.login;",
+				"return:aHR02ludHJhbmV0amVyLmNvbS8;",
+				"6a24226c7c3728d7bae9ad50:1;",
+				
+				
+		};
+		String[] properties = {
+				 "Connection: keep-alive" ,
+				  "Cache-Control: max-age=0" ,
+				  "Upgrade-Insecure-Requests: 1" ,
+				  "Origin: http://intranetjer.com" ,
+				  "Content-Type: application/x-www-form-urlencoded" ,
+				  "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36" ,
+				  "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9" ,
+				  "Referer: http://intranetjer.com/index.php/salir" ,
+				  "Accept-Language: es-CO,es-419;q=0.9,es;q=0.8,en;q=0.7" ,
+				  "Cookie: _ga=GA1.2.1223735231.1616732470; _gid=GA1.2.498518281.1624736225; _gat=1; 68bf0cf61574284b315ebc0a40eabab2=h6flait4ieocfrmmakqhfqf6p7" ,
+				
+				
+				
+		};
+		ConnectionFactory connection = new ConnectionFactory(fields,properties,url, version);
+		connection.setUserAgent("Mozilla/4.0");
+		connection.setMetod("POST");
+		String response = connection.buildConnection();
+		
+		
+		System.out.println(response);
+		
+		System.out.println(connection.getEndpointvalue("option"));
+	}
+}

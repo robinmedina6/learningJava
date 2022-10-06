@@ -1,0 +1,12 @@
+package perfil.profesional;
+
+public class Tecnologo  extends JefeArea{
+	public String tarea;
+
+	@Override
+	public String toString() {
+		return "Tecnologo [tarea=" + tarea + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ ", toString()=" + super.toString() + "]";
+	}
+	
+}

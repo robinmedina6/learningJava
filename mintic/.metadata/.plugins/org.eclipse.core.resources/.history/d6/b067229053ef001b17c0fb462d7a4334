@@ -1,0 +1,7 @@
+package hola.gui;
+
+import javax.swing.JPanel;
+
+public class HolaGui extends JPanel {
+
+}

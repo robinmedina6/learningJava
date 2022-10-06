@@ -1,0 +1,26 @@
+package fruteria;
+
+import java.util.Scanner;
+
+public class Fruteria {
+
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("numero kg Manzanas: ");
+		double nkg= entrada.nextInt();
+		System.out.println("Precio: ");
+		double precio = 5000;
+		double descuento=0;
+		if(nkg<5) {
+			descuento = 0.1;			
+		}else if(nkg<10){
+			descuento = 0.2;
+		}else {
+			descuento =0.4;			
+		}
+		double total = (nkg*precio);
+		 descuento = total*descuento;
+				System.out.println("precio final: "+(total-descuento)+" Descuento: "+descuento);
+	}
+	
+}

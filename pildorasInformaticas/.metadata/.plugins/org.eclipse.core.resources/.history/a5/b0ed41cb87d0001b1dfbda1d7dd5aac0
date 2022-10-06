@@ -1,0 +1,62 @@
+package poo;
+
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+public class Uso_Empleado {
+	public static void main(String[] args) {
+		/*Empleado empleado1 = new Empleado("robinson",85000,2019,05,17);
+		Empleado empleado2 = new Empleado("Ana Lopez",95000,1995,12,17);
+		Empleado empleado3 = new Empleado("matin",10000,2015,05,17);
+		empleado1.subirSueldo(5);
+		empleado2.subirSueldo(5);
+		empleado3.subirSueldo(5);
+		System.out.println("nombre: "+ empleado1.getNombre() +" Sueldo: "+
+				empleado1.getSueldo());
+		System.out.println("nombre: "+ empleado2.getNombre() +" Sueldo: "+
+				empleado2.getSueldo());
+		System.out.println("nombre: "+ empleado3.getNombre() +" Sueldo: "+
+				empleado3.getSueldo());
+				*/
+		Empleado misempleados[] = new  Empleado[3];
+		misempleados[0]= new Empleado("paco",85,1990,12,17);
+		misempleados[1]= new Empleado("karen",85,1990,12,17);
+		misempleados[2]= new Empleado("rodo",85,1990,12,17);
+		
+		for (Empleado emp:misempleados) {
+			emp.subirSueldo(5);
+		}
+		
+		for (Empleado emp:misempleados) {
+			System.out.println(
+							emp.subirSueldo(5);
+					);
+		}
+		
+	}
+}
+class Empleado{
+	private String nombre;
+	private double sueldo;
+	private Date altaContrato;
+	
+	public Empleado(String nombre, double sueldo, int year, int mes , int dia) {
+		this.nombre = nombre;
+		this.sueldo = sueldo;
+		GregorianCalendar calendario = new GregorianCalendar(year,mes-1,dia);
+		altaContrato = calendario.getTime();
+	
+	}
+	public String getNombre() {
+		return this.nombre;
+	}
+	public double getSueldo() {
+		return this.sueldo;
+	}
+	public Date getAltaContrato() {
+		return altaContrato;
+	}
+	public void subirSueldo(double percent) {
+		sueldo +=  sueldo * percent/100;
+	}
+}

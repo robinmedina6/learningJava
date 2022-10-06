@@ -1,0 +1,24 @@
+package semana4;
+
+public class SeleccionFutbol {
+	protected String nombre;
+	protected String apellido;
+	public int id;
+	public int edad;
+	
+	public void viajar() {
+		System.out.println("estoy viahando");
+	}
+	public void concentrar() {
+		System.out.println("estoy concentrado");
+	}
+	public void entrenar() {
+		System.out.println("estoy entrenando");
+	}
+	public void jugarPartido() {
+		System.out.println("estoy viahando");
+	}
+	
+	
+			
+}

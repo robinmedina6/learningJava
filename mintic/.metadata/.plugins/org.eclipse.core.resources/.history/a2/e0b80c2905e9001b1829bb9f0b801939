@@ -1,0 +1,13 @@
+package politicos;
+
+public abstract class Politico extends Persona {
+	public String regionRepresentada;
+	public String camara;
+
+	public Politico(String nombre, String apellido, String regionRepresentada, String camara) {
+		super(nombre, apellido);
+		this.regionRepresentada = regionRepresentada;
+		this.camara = camara;
+	}
+
+}

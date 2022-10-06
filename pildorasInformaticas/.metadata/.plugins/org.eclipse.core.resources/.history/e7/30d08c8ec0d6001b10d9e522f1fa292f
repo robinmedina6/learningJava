@@ -1,0 +1,40 @@
+package com.post.co;
+
+public class Example {
+
+	public static void main(String[] args) {
+		double version = 0.1;
+		String url = "url";
+		String[] fields = {
+				"username:user;",
+				"password:user;",
+				"Submit: ;",
+				"option:com_users;",
+				"task:user.login;",
+				"return:aHR02ludHJhbmV0amVyLmNvbS8;",
+				"6a24226c7c3728d7bae9ad50:1;",
+				
+				
+		};
+		String[] properties = {
+				"username:user;",
+				"password:user;",
+				"Submit: ;",
+				"option:com_users;",
+				"task:user.login;",
+				"return:aHR02ludHJhbmV0amVyLmNvbS8;",
+				"6a24226c7c3728d7bae9ad50:1;",
+				
+				
+		};
+		ConnectionFactory connection = new ConnectionFactory(fields,properties,url, version);
+		connection.setUserAgent("Mozilla/4.0");
+		connection.setMetod("POST");
+		String response = connection.buildConnection();
+		
+		
+		System.out.println(response);
+		
+		System.out.println(connection.getEndpointvalue("option"));
+	}
+}

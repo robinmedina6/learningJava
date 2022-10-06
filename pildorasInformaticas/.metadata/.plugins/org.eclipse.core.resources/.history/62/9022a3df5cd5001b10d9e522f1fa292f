@@ -1,0 +1,26 @@
+package com.post.co;
+
+public class Example {
+
+	public static void main(String[] args) {
+		double version = 0.1;
+		String url = "http://intranetjer.com/";
+		String[] fields = {/*
+				"username:1052413143;",
+				"password:1052413143;",
+				"option:com_users;",
+				"task:user.login;"
+				*/
+				
+		};
+		ConnectionFactory connection = new ConnectionFactory(fields,url, version);
+		connection.setUserAgent("Mozilla/4.0");
+		connection.setMetod("GET");
+		String response = connection.buildConnection();
+		
+		
+		System.out.println(response);
+		
+		System.out.println("hola");
+	}
+}

@@ -1,0 +1,35 @@
+package clasesobjetos;
+
+public class Coche {
+	
+	//atributos
+	String color ;
+	String marca;
+	int km ;
+	
+	//metodo
+	public static void main (String [] args) {
+		Coche coche1 = new Coche();
+		
+		coche1.color = "blanco";
+		coche1.marca="adudi";
+		coche1.km=0;
+		
+		System.out.println("el coche 1  es de color: " + coche1.color);
+		System.out.println("la marca del coche 1 es : " + coche1.marca);
+		System.out.println("el kilometraje del coche1 es: "+ coche1.km);
+		
+		Coche coche2 = new Coche();
+		coche2.color = "amarillo";
+		coche2.marca = "Ferrari";
+		coche2.km=10;
+		
+		System.out.println("el coche 1  es de color: " + coche2.color);
+		System.out.println("la marca del coche 1 es : " + coche2.marca);
+		System.out.println("el kilometraje del coche1 es: "+ coche2.km);
+		
+		
+	}
+	
+	
+}

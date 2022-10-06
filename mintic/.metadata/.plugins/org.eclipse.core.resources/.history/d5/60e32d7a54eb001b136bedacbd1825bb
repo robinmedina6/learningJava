@@ -1,0 +1,6 @@
+package perfil.profesional;
+
+public class JefeArea {
+	public String area;
+	
+}

@@ -1,0 +1,12 @@
+package perfil.profesional;
+
+public class JefeArea {
+	public String area;
+
+	@Override
+	public String toString() {
+		return "JefeArea [area=" + area + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
+				+ super.toString() + "]";
+	}
+	
+}

@@ -1,0 +1,54 @@
+package httprq;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+
+public class Principal {
+	public static void main(String[] args) throws IOException {
+		
+		URL url = new URL("https://jer.matrixtech.com.co/sigaadmin/jsp/login.jsp");
+		HttpURLConnection http = (HttpURLConnection)url.openConnection();
+		http.setRequestProperty("Connection", "keep-alive");
+		http.setRequestProperty("Cache-Control", "max-age=0");
+		//http.setRequestProperty("sec-ch-ua", ""Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"");
+		http.setRequestProperty("sec-ch-ua-mobile", "?0");
+		http.setRequestProperty("Upgrade-Insecure-Requests", "1");
+		http.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36");
+		http.setRequestProperty("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9");
+		http.setRequestProperty("Sec-Fetch-Site", "none");
+		http.setRequestProperty("Sec-Fetch-Mode", "navigate");
+		http.setRequestProperty("Sec-Fetch-User", "?1");
+		http.setRequestProperty("Sec-Fetch-Dest", "document");
+		http.setRequestProperty("Accept-Language", "es-CO,es-419;q=0.9,es;q=0.8,en;q=0.7");
+
+		System.out.println(http.getResponseCode() + " " + http.getResponseMessage());
+		printRequest(http);
+		http.disconnect();
+		
+		
+
+		
+
+	}
+	public static void printRequest(HttpURLConnection http) throws IOException {
+		StringBuilder resultado = new StringBuilder();
+		BufferedReader rd = new BufferedReader(new InputStreamReader(http.getInputStream()));
+		String linea;
+		// Mientras el BufferedReader se pueda leer, agregar contenido a resultado
+		while ((linea = rd.readLine()) != null) {
+			resultado.append(linea+"\n");
+		}
+		// Cerrar el BufferedReader
+		rd.close();
+		System.out.println(resultado);
+		
+	}
+
+}

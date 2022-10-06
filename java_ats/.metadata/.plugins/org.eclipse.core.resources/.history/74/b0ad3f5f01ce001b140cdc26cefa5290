@@ -1,0 +1,8 @@
+package clases;
+
+public class Persona extend Animal {
+
+	public void comer() {
+		System.out.println("estoy comiendo sentado y con Cubiertos");
+	}
+}

@@ -1,0 +1,4 @@
+
+public class CalculosMath {
+	double a =	(int)Math.sqrt(103.5);
+}

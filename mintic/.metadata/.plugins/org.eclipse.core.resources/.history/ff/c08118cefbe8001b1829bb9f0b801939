@@ -1,0 +1,9 @@
+package semana4;
+
+public class SeleccionFutbol {
+	protected nombre;
+	protected apellido;
+	public id;
+	public edad;
+	
+}
